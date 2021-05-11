@@ -1,0 +1,28 @@
+{
+  "name": "project2",
+  "version": "1.0.0",
+  "description": "A website that allows a user to post a game group for other players to join.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mmorrisonlk/project2.git"
+  },
+  "author": "Ashley, Mark, Marquell, Peter",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mmorrisonlk/project2/issues"
+  },
+  "homepage": "https://github.com/mmorrisonlk/project2#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "dotenv": "^9.0.2",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.3.2",
+    "express-session": "^1.17.1",
+    "mysql2": "^2.2.5",
+    "sequelize": "^6.6.2"
+  }
+}
