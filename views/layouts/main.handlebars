@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Find a Game Group</title>
+  <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="./css/jass.css">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+  <div class="flex-column justify-space-around">
+    <header class="display-flex justify-space-between align-center p-2">
+      <nav>
+        <div class="nav-wrapper deep-purple darken-3">
+          <h3 href="#" class="brand-logo"><i class="medium material-icons left" aria-label="headset">headset_mic</i><span class="left header-top">Gamer Groups</span><i class="large material-icons" aria-label="headset">headset_mic</i></h3>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="/">Home</a></li>
+            <li><a href="/">Main List</a></li>
+            <li><a href="/">User Groups</a></li>
+          </ul>
+          <!-- Conditionally render login or logout links -->
+          {{!-- {{#if logged_in}}
+          <a href="/profile">profile</a> |
+          <button class="no-button" id="logout">logout</button>
+          {{else}}
+          <a href="/login">login</a>
+          {{/if}} --}}
+        </div>
+      </nav>
+    </header>
+    <main class="container container-fluid mt-5">
+      <!-- Render the sub layout -->
+      {{{ body }}}
+    </main>
+    <footer>
+      
+    </footer>
+  </div>
+
+  <!-- Render script for logged in users only -->
+  {{!-- {{#if logged_in}}
+  <script src="/js/logout.js"></script>
+  {{/if}} --}}
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+
+</html>
