@@ -1,8 +1,8 @@
 const router = require('express').Router();
-// const { User } = require('../../models');
+// const { User } = require('../models');
 
 router.get('/', async (req, res) => {
-    console.log("Hello There")
+    console.log("General Kenobi")
     // const userList = await User.findAll().catch
     // ((err) => {
     //     res.json(err);
@@ -11,3 +11,5 @@ router.get('/', async (req, res) => {
     //     user.get({ plain: true }));
     //     res.render('all', {users});
 });
+
+module.exports = router;
