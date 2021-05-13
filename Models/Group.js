@@ -25,7 +25,14 @@ Group.init(
         user_id:{
             type: INTEGER,
             references: {
-                model: 'user',
+                model: 'User',
+                key: 'id',
+              }
+        },
+        comment_id:{
+            type: INTEGER,
+            references: {
+                model: 'Comment',
                 key: 'id',
               }
         },
