@@ -3,12 +3,12 @@ const Group = require('./Group');
 const Comment = require('./Comment');
 
 User.hasMany(Group, {
-  foreignKey: 'group_id',
+  foreignKey: 'user_id',
   onDelete: 'CASCADE'
 });
 
 User.hasMany(Comment,{
-  foreignKey: 'comment_id'
+  foreignKey: 'user_id'
 })
   
 Group.belongsTo(User, {
@@ -28,4 +28,4 @@ Comment.belongsTo(User,{
   foreignKey: 'user_id'
 })
 
-module.exports = { User, Group };
+module.exports = { User, Group,Comment };
