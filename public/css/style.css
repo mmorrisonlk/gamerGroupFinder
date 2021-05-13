@@ -32,3 +32,11 @@ nav ul {
 nav i {
   padding: 0 5px 0 10px;
 }
+
+.search-field {
+  margin: 15px 0 0 20px;
+}
+
+.search-btn {
+  margin: 15px;
+}
