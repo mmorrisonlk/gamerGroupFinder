@@ -11,11 +11,11 @@ Comment.init(
             autoIncrement: true,
         },
         content:{
-            type:STRING,
+            type: DataTypes.STRING,
             allowNull:false
         },
         user_id:{
-            type:INTEGER,
+            type: DataTypes.INTEGER,
             references: {
                 model: 'User',
                 key: 'id',
@@ -23,11 +23,20 @@ Comment.init(
 
         },
         group_id:{
-            type:INTEGER,
+            type: DataTypes.INTEGER,
             references: {
                 model: 'Group',
                 key: 'id',
               }
         }
+    },
+    {
+    sequelize,
+    timestamps: false,
+    freezeTableName: true,
+    underscored: true,
+    modelName: 'user',
     }
 )
+
+module.exports = Comment;
