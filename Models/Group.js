@@ -11,26 +11,26 @@ Group.init(
             autoIncrement: true,
           },
         title:{
-            type: STRING,
+            type: DataTypes.STRING,
             allowNull: false,
         },
         content:{
             allowNull: false,
-            type:STRING,
+            type: DataTypes.STRING,
         },
         gamerTag:{
-            type: STRING,
+            type: DataTypes.STRING,
             allowNull: true,
         },
         user_id:{
-            type: INTEGER,
+            type: DataTypes.INTEGER,
             references: {
                 model: 'User',
                 key: 'id',
               }
         },
         comment_id:{
-            type: INTEGER,
+            type: DataTypes.INTEGER,
             references: {
                 model: 'Comment',
                 key: 'id',
@@ -42,10 +42,17 @@ Group.init(
 
         },
         timeTo:{
-            type:STRING,
+            type: DataTypes.STRING,
             allowNull:true
         }
 
+    },
+    {
+    sequelize,
+    timestamps: false,
+    freezeTableName: true,
+    underscored: true,
+    modelName: 'user',
     }
 )
 
