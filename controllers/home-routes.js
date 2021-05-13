@@ -1,5 +1,5 @@
 const router = require('express').Router();
-// const { User } = require('../models');
+const { User } = require('../Models');
 
 router.get('/', async (req, res) => {
     console.log("General Kenobi")
@@ -9,7 +9,15 @@ router.get('/', async (req, res) => {
     // })
     //     const users = userList.map((user) =>
     //     user.get({ plain: true }));
-    //     res.render('all', {users});
+        res.render('homepage');
+});
+
+router.get('/login', (req, res) => {
+    // if (req.session.loggedIn) {
+    //     res.redirect('/');
+    //     return;
+    // }
+    res.render('login');
 });
 
 module.exports = router;
