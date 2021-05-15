@@ -1,3 +1,11 @@
+a {
+  color: black;
+}
+
+a:hover {
+  color: blue;
+}
+
 h3 {
   margin: 0;
 }
@@ -21,6 +29,7 @@ nav ul {
 
 .container {
   margin-top: 20px;
+  padding: 15px;
 }
 
 .form {
