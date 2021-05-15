@@ -3,18 +3,23 @@ const { Group, User } = require('../Models');
 
 router.get('/', async (req, res) => {
     try {
-        const groupData = await Group.findAll({
-            include: [{ model: User }]
-        });
-        const groups = groupData.map((group) => group.get({ plain: true }));
-        res.render('homepage', {
-            groups,
-            logged_in: req.session.logged_in
-        });
+        // if(req.session.logged_in) {
+            const groupData = await Group.findAll({
+                include: [{ model: User }]
+            });
+            const groups = groupData.map((group) => group.get({ plain: true }));
+            res.render('homepage', {
+                groups,
+                logged_in: req.session.logged_in
+            });
+        // }
+        // else {
+        //     res.render('landingpage');
+        // }
     }
     catch (err) {
         console.error(err);
-        res.json(err);
+        res.status(500).json(err);
     }
 });
 
