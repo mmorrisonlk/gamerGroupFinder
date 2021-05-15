@@ -4,14 +4,18 @@ const seedGroups= require('./groupData');
 const seedUsers = require('./userData');
 
 const seedAll = async () => {
-  await sequelize.sync({ force: true });
+ try{ await sequelize.sync({ force: true });
+
+   await seedUsers();
+
+   await seedGroups();
 
   await seedComments();
-  
-  await seedGroups();
-
-  await seedUsers();
-
+ 
+ }
+ catch(error){
+   console.error(error)
+ }
   process.exit(0);
 };
 
