@@ -11,7 +11,7 @@ router.post('/', async (req, res) => {
 
     // Set up sessions with a 'loggedIn' variable set to `true`
     req.session.save(() => {
-      req.session.loggedIn = true;
+      req.session.logged_in = true;
 
       res.status(200).json(userData);
     });
@@ -47,7 +47,7 @@ router.post('/login', async (req, res) => {
   
       // Once the user successfully logs in, set up the sessions variable 'loggedIn'
       req.session.save(() => {
-        req.session.loggedIn = true;
+        req.session.logged_in = true;
   
         res
           .status(200)
@@ -61,7 +61,7 @@ router.post('/login', async (req, res) => {
 
   router.post('/logout', (req, res) => {
     // When the user logs out, destroy the session
-    if (req.session.loggedIn) {
+    if (req.session.logged_in) {
       req.session.destroy(() => {
         res.status(204).end();
       });
