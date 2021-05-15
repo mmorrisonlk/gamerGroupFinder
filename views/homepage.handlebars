@@ -12,16 +12,15 @@
     </div>
 </div>
 
-{{!-- <!-- Loop over each object in the projects array -->
-{{#each projects as |project| }} --}}
+{{#each groups as |group| }}
 <div class="container">
     <div class="row">
         <div class="col s1">Picture</div>
-        <div class="col s5">Description</div>
+        <div class="col s5">{{content}}</div>
         <div class="col s2 right">Casual</div>
         <div class="col s2 right">3 / 5 People</div>
         <div class="col s2 right">Shooter</div>
     </div>
 </div>
     
-{{!-- {{/each}} --}}
+{{/each}}
