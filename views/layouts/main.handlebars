@@ -20,21 +20,19 @@
           <ul id="nav-mobile" class="right hide-on-med-and-down">
             <li><a href="/">Home</a></li>
             <li><a href="/">Main List</a></li>
-            <li><a href="/">User Groups</a></li>
-            <li><a href="/">Profile</a></li>
+            {{#if logged_in}}
+              <li><a href="/userlist">User Groups</a></li>
+              <li><a href="/profile">Profile</a></li>
+              <li><a href="/logout">Logout</a></li>
+            {{else}}
+              <li><a href="/login">Login</a></li>
+            {{/if}}
           </ul>
-          <!-- Conditionally render login or logout links -->
-          {{!-- {{#if logged_in}}
-          <a href="/profile">profile</a> |
-          <button class="no-button" id="logout">logout</button>
-          {{else}}
-          <a href="/login">login</a>
-          {{/if}} --}}
+          
         </div>
       </nav>
     </header>
     <main class="container-fluid mt-5">
-      <!-- Render the sub layout -->
       {{{ body }}}
     </main>
     <footer>
