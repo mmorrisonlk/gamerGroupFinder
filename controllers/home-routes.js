@@ -1,15 +1,21 @@
 const router = require('express').Router();
-const { Group } = require('../Models');
+const { Group, User } = require('../Models');
 
 router.get('/', async (req, res) => {
-    const groupData = await Group.findAll().catch
-    ((err) => {
-        res.json(err);
+    try {
+        const groupData = await Group.findAll({
+            include: [{ model: User }]
+        });
+        const groups = groupData.map((group) => group.get({ plain: true }));
+        res.render('homepage', {
+            groups,
+            logged_in: req.session.logged_in
+        });
+    }
+    catch (err) {
         console.error(err);
-    })
-        const groups = groupData.map((group) =>
-        group.get({ plain: true }));
-        res.render('homepage', groups);
+        res.json(err);
+    }
 });
 
 router.get('/login', (req, res) => {
