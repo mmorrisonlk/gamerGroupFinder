@@ -8,7 +8,11 @@ const groups = [
         gamerTag:" PSN: bigSnipe223",
         user_id:1,
         timeFrom: "5 pm",
-        timeTo: " 7pm"
+        timeTo: " 7pm",
+        gameName:"OverWatch",
+        currentPlayers:3,
+        maxPlayers:5,
+        dificulty:"expert"
 
     },
     {
@@ -18,7 +22,11 @@ const groups = [
         gamerTag:" Xbox: jellyDoeSlinder",
         user_id:4,
         timeFrom: "1 pm",
-        timeTo: " 7pm"
+        timeTo: " 7pm",
+        gameName:"Red Dead Redemption",
+        currentPlayers:3,
+        maxPlayers:4,
+        dificulty:"for fun"
     },
     {
         id:3,
@@ -27,10 +35,14 @@ const groups = [
         gamerTag:" PSN: malterHeatLeg",
         user_id:7,
         timeFrom: "9 am",
-        timeTo: " 7 pm"
+        timeTo: " 7 pm",
+        gameName:"Madden",
+        currentPlayers:2,
+        maxPlayers:2,
+        dificulty:"expert"
     },
 ]
 
-const seedGroups = () => Group.bulkCreate(groups);
+const seedGroups = async () =>  Group.bulkCreate(groups);
 
 module.exports = seedGroups;
