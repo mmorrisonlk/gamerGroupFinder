@@ -1,5 +1,21 @@
+a {
+  color: black;
+}
+
+.group-link:hover {
+  color: blue;
+}
+
 h3 {
   margin: 0;
+}
+
+.btn {
+  background-color: #4527a0;
+}
+
+.btn:hover {
+  background-color: #673ab7;
 }
 
 .header-top {
@@ -21,6 +37,7 @@ nav ul {
 
 .container {
   margin-top: 20px;
+  padding: 15px;
 }
 
 .form {
