@@ -3,7 +3,7 @@ const {Group} = require('../models');
 const groups = [
     {
         id:1,
-        tittle: "Overwatch Session?",
+        title: "Overwatch Session?",
         content:" Id like ot play some overwatch later today any one down to join?",
         gamerTag:" PSN: bigSnipe223",
         user_id:1,
@@ -13,7 +13,7 @@ const groups = [
     },
     {
         id:2,
-        tittle: "Lets play Some Red Dead Redemption?",
+        title: "Lets play Some Red Dead Redemption?",
         content:" Lets go back in time and RP some red dead?",
         gamerTag:" Xbox: jellyDoeSlinder",
         user_id:4,
@@ -22,7 +22,7 @@ const groups = [
     },
     {
         id:3,
-        tittle: "Any one wanna play Madden for Money?",
+        title: "Any one wanna play Madden for Money?",
         content:" Im the best madden player lets bet!",
         gamerTag:" PSN: malterHeatLeg",
         user_id:7,
@@ -31,6 +31,6 @@ const groups = [
     },
 ]
 
-const seedGroups = () => Group.bulkCreate(seedGroups);
+const seedGroups = () => Group.bulkCreate(groups);
 
 module.exports = seedGroups;
