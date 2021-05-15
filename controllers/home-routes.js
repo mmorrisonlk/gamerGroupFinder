@@ -1,7 +1,8 @@
 const router = require('express').Router();
 const { Group, User } = require('../Models');
+const withAuth = require('../utils/auth');
 
-router.get('/', async (req, res) => {
+router.get('/', withAuth, async (req, res) => {
     try {
         // if(req.session.logged_in) {
             const groupData = await Group.findAll({
