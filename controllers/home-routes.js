@@ -4,19 +4,18 @@ const withAuth = require('../utils/auth');
 
 router.get('/', withAuth, async (req, res) => {
     try {
-        // if(req.session.logged_in) {
-            const groupData = await Group.findAll({
-                include: [{ model: User }]
-            });
-            const groups = groupData.map((group) => group.get({ plain: true }));
-            res.render('homepage', {
-                groups,
-                logged_in: req.session.logged_in
-            });
-        // }
-        // else {
-        //     res.render('landingpage');
-        // }
+        // const userData = await User.findAll({
+        //     attributes: { exclude: ['password'] },
+        //     order: [['name', 'ASC']],
+        //   });
+      
+        //   const users = userData.map((project) => project.get({ plain: true }));
+          res.render('homepage')
+        //   res.render('homepage', {
+        //     users,
+        //     // Pass the logged in flag to the template
+        //     logged_in: req.session.logged_in,
+        //   });
     }
     catch (err) {
         console.error(err);
@@ -26,6 +25,7 @@ router.get('/', withAuth, async (req, res) => {
 
 router.get('/login', (req, res) => {
     if (req.session.loggedIn) {
+        console.log("req.session.loggedIn", req.session.loggedIn)
         res.redirect('/');
         return;
     }
