@@ -29,13 +29,6 @@ Group.init(
                 key: 'id',
               }
         },
-        comment_id:{
-            type: DataTypes.INTEGER,
-            references: {
-                model: 'Comment',
-                key: 'id',
-              }
-        },
         timeFrom:{
             type:STRING,
             allowNull:true
@@ -52,7 +45,7 @@ Group.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'user',
+    modelName: 'User',
     }
 )
 

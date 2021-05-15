@@ -16,7 +16,9 @@ Comment.init(
         },
         user_id:{
             type: DataTypes.INTEGER,
+            allowNull:false,
             references: {
+                
                 model: 'User',
                 key: 'id',
               }
@@ -24,6 +26,7 @@ Comment.init(
         },
         group_id:{
             type: DataTypes.INTEGER,
+            allowNull:false,
             references: {
                 model: 'Group',
                 key: 'id',
