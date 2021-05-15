@@ -7,7 +7,9 @@ const groups = [
         content:" Id like ot play some overwatch later today any one down to join?",
         gamerTag:" PSN: bigSnipe223",
         user_id:1,
-        comment_id:[1,2]
+        timeFrom: "5 pm",
+        timeTo: " 7pm"
+
     },
     {
         id:2,
@@ -15,7 +17,8 @@ const groups = [
         content:" Lets go back in time and RP some red dead?",
         gamerTag:" Xbox: jellyDoeSlinder",
         user_id:4,
-        comment_id:[3,4]
+        timeFrom: "1 pm",
+        timeTo: " 7pm"
     },
     {
         id:3,
@@ -23,7 +26,8 @@ const groups = [
         content:" Im the best madden player lets bet!",
         gamerTag:" PSN: malterHeatLeg",
         user_id:7,
-        comment_id:[5,6]
+        timeFrom: "9 am",
+        timeTo: " 7 pm"
     },
 ]
 

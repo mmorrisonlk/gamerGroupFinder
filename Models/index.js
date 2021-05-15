@@ -15,9 +15,6 @@ Group.belongsTo(User, {
   foreignKey: 'user_id'
 });
 
-Group.hasMany(Comment,{
-  foreignKey:"comment_id"
-})
 
 Comment.belongsToMany(Group,{
   through: 'groupComments',

@@ -4,12 +4,14 @@ const users = [
     {
         id:1,
         email: "hotBoy30@email.com",
-        password:"Heavy45"
+        password:"Heavy45",
+       
     },
     {
         id:2,
         email: "diorMe@email.com",
-        password:"BigLoto45"
+        password:"BigLoto45",
+        
     },
     {
         id:3,
