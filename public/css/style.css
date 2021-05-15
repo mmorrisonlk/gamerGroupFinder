@@ -18,6 +18,14 @@ h3 {
   background-color: #673ab7;
 }
 
+.btn:active {
+  background-color: #673ab7;
+}
+
+.btn:focus {
+  background-color: #673ab7;
+}
+
 .header-top {
   padding: 15px 10px 0 0;
 }
