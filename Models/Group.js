@@ -37,7 +37,7 @@ Group.init(
               }
         },
         timeFrom:{
-            type:STRING,
+            type: DataTypes.STRING,
             allowNull:true
 
         },
