@@ -1,4 +1,4 @@
-const { Model, DataTypes, STRING, INTEGER } = require('sequelize');
+const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 class Group extends Model {}
 
@@ -25,27 +25,25 @@ Group.init(
         user_id:{
             type: DataTypes.INTEGER,
             references: {
-                model: 'User',
+                model: 'user',
                 key: 'id',
-              }
+            }
         },
         timeFrom:{
-            type:STRING,
+            type: DataTypes.STRING,
             allowNull:true
-
         },
         timeTo:{
             type: DataTypes.STRING,
             allowNull:true
         }
-
     },
     {
     sequelize,
-    timestamps: false,
+    timestamps: true,
     freezeTableName: true,
     underscored: true,
-    modelName: 'User',
+    modelName: 'group',
     }
 )
 

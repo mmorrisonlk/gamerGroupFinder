@@ -46,6 +46,6 @@ const users = [
     
 ]
 
-const seedUsers = () => Comment.bulkCreate(seedUsers);
+const seedUsers = () => User.bulkCreate(users);
 
 module.exports = seedUsers;
