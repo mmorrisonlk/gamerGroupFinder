@@ -12,6 +12,14 @@
     </div>
 </div>
 
+{{!-- <div class="row">
+    <div class="col s1"></div>
+    <div class="col s5">Content</div>
+    <div class="col s2 right">Difficulty</div>
+    <div class="col s2 right">Current / Max Players</div>
+    <div class="col s2 right">Game Name</div>
+</div> --}}
+
 {{#each groups as |group| }}
 
 <div class="container indigo lighten-4">
@@ -19,9 +27,9 @@
         <div class="row">
             <div class="col s1">Picture</div>
             <div class="col s5">{{content}}</div>
-            <div class="col s2 right">Casual</div>
-            <div class="col s2 right">3 / 5 People</div>
-            <div class="col s2 right">Shooter</div>
+            <div class="col s2 right">{{dificulty}}</div>
+            <div class="col s2 right">{{currentPlayers}} / {{maxPlayers}} People</div>
+            <div class="col s2 right">{{gameName}}</div>
         </div>
     </a>
 </div>
