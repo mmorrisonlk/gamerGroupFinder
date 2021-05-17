@@ -12,7 +12,7 @@ const groups = [
         gameName:"OverWatch",
         currentPlayers:3,
         maxPlayers:5,
-        dificulty:"expert"
+        dificulty:"competitive"
 
     },
     {
@@ -26,7 +26,7 @@ const groups = [
         gameName:"Red Dead Redemption",
         currentPlayers:3,
         maxPlayers:4,
-        dificulty:"for fun"
+        dificulty:"casual"
     },
     {
         id:3,
@@ -39,7 +39,7 @@ const groups = [
         gameName:"Madden",
         currentPlayers:2,
         maxPlayers:2,
-        dificulty:"expert"
+        dificulty:"competitive"
     },
 ]
 
