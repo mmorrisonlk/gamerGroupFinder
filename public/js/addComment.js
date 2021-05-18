@@ -8,6 +8,7 @@ const newFormHandler = async (event) => {
   ];
 
   if (contents) {
+    console.log("start of contents")
     const response = await fetch(`/api/comments`, {
       method: 'POST',
       body: JSON.stringify({ contents, group_id }),

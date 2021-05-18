@@ -16,7 +16,6 @@ router.post('/group', withAuth, async (req, res) => {
 });
 
 
-
 router.put('/:id', withAuth, async (req, res) => {
     Group.update(req.body, {
     where: {
