@@ -20,11 +20,10 @@
     </div>
 </div>
 
-<div class="row">
-    
-{{#each project.Comments as |comment| }}
-{{> comment}}
-{{/each}}
+<div class="container">
+    {{#each project.Comments as |comment| }}
+        {{> comment}}
+    {{/each}}
 </div>
 
 <div class="container">
