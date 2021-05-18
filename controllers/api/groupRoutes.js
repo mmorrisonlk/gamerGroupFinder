@@ -2,7 +2,7 @@ const router = require('express').Router();
 const { Group } = require('../../models');
 const withAuth = require('../../utils/auth');
 
-router.post('/', withAuth, async (req, res) => {
+router.post('/group', withAuth, async (req, res) => {
   try {
     const newGroup = await Group.create({
       ...req.body,
