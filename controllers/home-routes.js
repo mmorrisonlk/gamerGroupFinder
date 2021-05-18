@@ -61,7 +61,6 @@ router.get('/group/:id', withAuth, async (req, res) => {
     });
     console.log("req.session.id", req.session.id)
     const project = group.get({ plain: true });
-    console.log(project)
     res.render('group', {
         project,
         logged_in: req.session.logged_in
@@ -73,4 +72,27 @@ router.get('/group/:id', withAuth, async (req, res) => {
   }
   });
 
+  router.get("/user-group", async (req,res) => {
+    try{
+     const groups = await Group.findAll({
+        includes: [{ model: User }],
+        where: {
+            user_id: req.session.user_id
+        }
+    })
+   const  groupList = groups.map((group) => {
+       return group.get({ plain: true })
+        
+    })
+    console.log(groupList)
+    res.render('userList',{
+      groupList,
+      logged_in: req.session.logged_in
+    })
+    }
+    catch(err){
+      console.error(err)
+      res.status(500).json(err)
+    }
+  })
 module.exports = router;

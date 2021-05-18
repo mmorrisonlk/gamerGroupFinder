@@ -21,19 +21,8 @@
     </div>
 </div>
 
-
 {{#each groups as |group| }}
 
-<div class="container indigo lighten-4">
-    <a href='/group/{{group.id}}' class="group-link">
-        <div class="row">
-            <div class="col s6">{{content}}</div>
-            <div class="col s2 right">{{dificulty}}</div>
-            <div class="col s2 right">{{currentPlayers}} / {{maxPlayers}} People</div>
-            <div class="col s2 right">{{gameName}}</div>
-        </div>
-    </a>
-</div>
+    {{> group}}
 
-    
 {{/each}}
