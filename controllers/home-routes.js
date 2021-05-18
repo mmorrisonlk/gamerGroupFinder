@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Group, User } = require('../Models');
+const { Group, User, Comment } = require('../Models');
 const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
@@ -50,5 +50,13 @@ router.get('/login', (req, res) => {
     }
     res.render('login');
 });
+
+router.get('/:id', withAuth, async (req, res) => {
+    const userData = await Group.findByPk(req.session.id, {
+        include: [{ model: Comment, 
+        include:[{model:User }] }]
+
+    });
+})
 
 module.exports = router;
