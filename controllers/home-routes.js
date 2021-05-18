@@ -52,12 +52,24 @@ router.get('/login', (req, res) => {
     res.render('login');
 });
 
-router.get('/:id', withAuth, async (req, res) => {
-    const userData = await Group.findByPk(req.session.id, {
+router.get('/group/:id', withAuth, async (req, res) => {
+    try{
+        const group = await Group.findByPk(req.params.id, {
         include: [{ model: Comment, 
-        include:[{model:User }] }]
-
+        include:[{model:User}] }]
+            
     });
-})
+    console.log("req.session.id", req.session.id)
+    const project = group.get({ plain: true });
+    res.render('group', {
+        project,
+        logged_in: req.session.logged_in
+    });
+  }
+  catch (err){
+      console.error(err)
+    res.status(500).json(err)
+  }
+  });
 
 module.exports = router;
