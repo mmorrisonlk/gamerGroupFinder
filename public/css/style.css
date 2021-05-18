@@ -69,3 +69,12 @@ nav i {
 .comment-content {
   padding-bottom: 10px;
 }
+
+.contact-info {
+  margin-top: 45px;
+  font-weight: bold;
+}
+
+textarea {
+  resize: none;
+}
