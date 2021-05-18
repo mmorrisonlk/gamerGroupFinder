@@ -14,8 +14,9 @@
         <div class="col s2 right">{{project.currentPlayers}} / {{project.maxPlayers}} People</div>
         <div class="col s2 right">{{project.gameName}}</div>
     </div>
-    <div class="row">
-        <p></p>
+    <div class="row contact-info">
+        <p class="times">Game time from {{project.timeFrom}} to {{project.timeTo}}</p>
+        <p>Available at: {{project.gamerTag}} or {{project.User.email}}</p>
     </div>
 </div>
 
@@ -24,3 +25,15 @@
         {{> comment}}
     {{/each}}
 </div>
+
+<div class="container">
+  <form class="form new-comment-form">
+    <p>Comment</p>
+    <textarea type="text" id="comment-text" row="4" cols="50"></textarea>
+    <br>
+    <button class="btn btn-primary">Submit</button>
+  </form>
+  
+</div>
+
+<script src="../js/addComment.js"></script>
