@@ -26,11 +26,12 @@ router.get('/', async (req, res) => {
 
 router.get('/profile', withAuth, async (req, res) => {
     try {
+        console.log("PrefindbyPK")
         const userData = await User.findByPk(req.session.user_id, {
             attributes: { exclude: ['password']},
             include: [{ model: Group }]
         });
-
+        console.log("userData", userData)
         const user = userData.get({ plain: true});
 
         res.render('profile', {
