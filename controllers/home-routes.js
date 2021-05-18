@@ -61,7 +61,7 @@ router.get('/group/:id', withAuth, async (req, res) => {
     });
     console.log("req.session.id", req.session.id)
     const project = group.get({ plain: true });
-    res.render('group', {
+    res.render('singleGroup', {
         project,
         logged_in: req.session.logged_in
     });
