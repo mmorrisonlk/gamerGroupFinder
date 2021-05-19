@@ -100,4 +100,23 @@ router.get('/group/:id', withAuth, async (req, res) => {
       res.status(500).json(err)
     }
   })
+
+router.get('/create', withAuth, async (req, res) => {
+    try {
+        const userData = await User.findByPk(req.session.user_id, {
+        attributes: { exclude: ['password'] }
+        });
+
+        const user = userData.get({ plain: true });
+
+        res.render('createGroup', {
+        ...user,
+        logged_in: true
+        });
+    } catch (err) {
+        console.error(err);
+        res.status(500).json(err);
+    }
+});
+
 module.exports = router;
