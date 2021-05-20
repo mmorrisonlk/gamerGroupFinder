@@ -2,7 +2,7 @@ const router = require('express').Router();
 const { Group, Comment,User } = require('../../models');
 const withAuth = require('../../utils/auth');
 
-router.post('/group', withAuth, async (req, res) => {
+router.post('/', withAuth, async (req, res) => {
   try {
     const newGroup = await Group.create({
       ...req.body,
@@ -11,6 +11,7 @@ router.post('/group', withAuth, async (req, res) => {
 
     res.status(200).json(newGroup);
   } catch (err) {
+    console.error(err);
     res.status(400).json(err);
   }
 });
