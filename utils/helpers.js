@@ -1,7 +1,8 @@
+const formatDistance = require('date-fns/formatDistance');
+const subDays = require('date-fns/subDays');
+
 module.exports = {
     format_date: (date) => {
-        // Format date as MM/DD/YYYY
-        return date.toLocaleDateString();
+        formatDistance(subDays(new Date(), 3), new Date(date), { addSuffix: true })
     }
 }
-//date-fns
