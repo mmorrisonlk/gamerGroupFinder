@@ -10,6 +10,10 @@ button a {
   color: blue;
 }
 
+.content-label {
+  padding-left: 10px;
+}
+
 .past-groups {
   margin-bottom: 15px;
 }
