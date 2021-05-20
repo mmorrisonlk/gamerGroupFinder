@@ -90,3 +90,21 @@ nav i {
 textarea {
   resize: none;
 }
+
+@media screen and (max-width: 725px) {
+  nav .brand-logo {
+    font-size: 25px;
+    position: relative;
+    left: 30%;
+    margin-block-start: 0;
+    margin-block-end: 0;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  nav .brand-logo {
+    font-size: 25px;
+    position: relative;
+    left: 35%;
+  }
+}
