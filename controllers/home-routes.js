@@ -9,6 +9,7 @@ router.get('/', async (req, res) => {
                 include: [{ model: User }]
             });
             const groups = groupData.map((group) => group.get({ plain: true }));
+            console.log(groups)
             res.render('homepage', {
                 groups,
                 logged_in: req.session.logged_in
@@ -119,4 +120,28 @@ router.get('/create', withAuth, async (req, res) => {
     }
 });
 
+router.get('/edit-group/:id', withAuth, async (req,res)=> {
+    try{
+        const group = await Group.findByPk(req.params.id, {
+            include: [
+                { model: User },
+                {
+                model: Comment, 
+                include: [{
+                    model:User
+                }]
+            }]
+        });
+        console.log("req.session.id", req.session.id)
+        const project = group.get({ plain: true });
+        res.render('userGroup', {
+            project,
+            logged_in: req.session.logged_in
+        });
+    }
+    catch (err){
+        console.error(err)
+        res.status(500).json(err)
+    }
+})
 module.exports = router;
