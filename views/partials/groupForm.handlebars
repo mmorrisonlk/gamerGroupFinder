@@ -1,0 +1,58 @@
+<div class="container">
+    <form class="col s12" id="upsert-group">
+        <div class="row">
+            <div class="input-field col s12">
+                <input id="title" type="text" value="{{project.title}}">
+                <label for="title">Title</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <textarea id="content">{{project.content}}</textarea>
+                <label class="content-label" for="content">Content</label>
+            </div>
+        </div>
+        <div class="input-field col s12">
+            <select id="difficulty">
+            <option value="" disabled >Choose one...</option>
+            <option value="beginner" {{#if (if_eq project.dificulty 'beginner')}}selected{{/if}}>Beginner</option>
+            <option value="casual" {{#if (if_eq project.dificulty 'casual')}}>Casual{{/if}}</option>
+            <option value="competitive" {{#if (if_eq project.dificulty 'competitive')}}selected{{/if}}>Competitive</option>
+            </select>
+            <label>Difficulty</label>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <input id="gamer_tag" type="text" value="{{project.gamerTag}}">
+                <label for="gamer_tag">Gamer Tag</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <input id="game_name" type="text" value="{{project.gameName}}">
+                <label for="game_name">Game Name</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s6">
+                <input id="time_from" type="text" value="{{project.timeFrom}}">
+                <label for="time_from">Session Time From</label>
+            </div>
+            <div class="input-field col s6">
+                <input id="time_to" type="text" value="{{project.timeTo}}">
+                <label for="time_to">Session Time To</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s6">
+                <input id="current_players" type="text" value="{{project.currentPlayers}}">
+                <label for="current_players">Current Players</label>
+            </div>
+            <div class="input-field col s6">
+                <input id="max_players" type="text" value="{{project.maxPlayers}}">
+                <label for="max_players">Max Group Players</label>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">{{buttonText}}</button>
+    </form>
+</div>

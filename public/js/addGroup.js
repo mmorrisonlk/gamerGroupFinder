@@ -34,5 +34,5 @@ const newFormHandler = async (event) => {
 };
 
 document
-.querySelector('#add-group')
+.querySelector('#upsert-group')
 .addEventListener('submit', newFormHandler);
