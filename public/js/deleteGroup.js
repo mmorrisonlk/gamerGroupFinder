@@ -1,18 +1,3 @@
-const editFormHandler = (event) => {
-  event.preventDefault();
-
-  const id = location.toString().split('/')[
-    location.toString().split('/').length - 1
-  ];
-
-  try {
-    document.location.replace(`/edit-group/${id}`)
-  } catch (err) {
-    console.error(err);
-    res.status(500).json(err);
-  }
-};
-
 const deleteFormHandler = async (event) => {
   event.preventDefault();
 
@@ -40,9 +25,6 @@ const deleteFormHandler = async (event) => {
   }
 };
 
-document
-.querySelector('#edit-btn')
-.addEventListener('click', editFormHandler);
 
 document
 .querySelector('#delete-btn')
