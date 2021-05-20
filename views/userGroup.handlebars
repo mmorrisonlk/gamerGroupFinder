@@ -18,6 +18,8 @@
       <p class="times">Game time from {{project.timeFrom}} to {{project.timeTo}}</p>
       <p>Available at: {{project.gamerTag}} or {{project.User.email}}</p>
   </div>
+  
+  {{> groupForm buttonText='Edit'}}
 
   <div class="row">
     <div class="col m2">
@@ -28,5 +30,5 @@
     </div>
   </div>
 </div>
-
+<script src="../js/editGroup.js"></script>
 <script src="../js/deleteGroup.js"></script>
