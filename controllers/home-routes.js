@@ -9,6 +9,7 @@ router.get('/', async (req, res) => {
                 include: [{ model: User }]
             });
             const groups = groupData.map((group) => group.get({ plain: true }));
+            console.log(groups)
             res.render('homepage', {
                 groups,
                 logged_in: req.session.logged_in
@@ -119,9 +120,9 @@ router.get('/create', withAuth, async (req, res) => {
     }
 });
 
-router.get('/edit/:id', withAuth, async (req, res) => {
+router.get('/edit-group/:id', withAuth, async (req,res)=> {
     try{
-        const groupData = await Group.findByPk(req.params.id, {
+        const group = await Group.findByPk(req.params.id, {
             include: [
                 { model: User },
                 {
@@ -131,9 +132,9 @@ router.get('/edit/:id', withAuth, async (req, res) => {
                 }]
             }]
         });
-        const group = groupData.get({ plain: true });
-        res.render('editGroup', {
-            group,
+        const project = group.get({ plain: true });
+        res.render('userGroup', {
+            project,
             logged_in: req.session.logged_in
         });
     }
@@ -142,5 +143,4 @@ router.get('/edit/:id', withAuth, async (req, res) => {
         res.status(500).json(err)
     }
 });
-
 module.exports = router;
