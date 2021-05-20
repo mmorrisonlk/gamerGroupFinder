@@ -119,4 +119,28 @@ router.get('/create', withAuth, async (req, res) => {
     }
 });
 
+router.get('/edit/:id', withAuth, async (req, res) => {
+    try{
+        const groupData = await Group.findByPk(req.params.id, {
+            include: [
+                { model: User },
+                {
+                model: Comment, 
+                include: [{
+                    model:User
+                }]
+            }]
+        });
+        const group = groupData.get({ plain: true });
+        res.render('editGroup', {
+            group,
+            logged_in: req.session.logged_in
+        });
+    }
+    catch (err){
+        console.error(err)
+        res.status(500).json(err)
+    }
+});
+
 module.exports = router;
