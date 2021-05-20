@@ -6,7 +6,7 @@ const editFormHandler = (event) => {
   ];
 
   try {
-    document.location.replace(`/edit/${id}`)
+    document.location.replace(`/edit-group/${id}`)
   } catch (err) {
     console.error(err);
     res.status(500).json(err);
@@ -30,7 +30,7 @@ const deleteFormHandler = async (event) => {
     });
 
     if (response.ok) {
-      document.location.replace('/dashboard');
+      document.location.replace('/user-group');
     } else {
       alert('Failed to delete group');
     }
