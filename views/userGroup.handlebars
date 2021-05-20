@@ -8,24 +8,24 @@
 </div>
 
 <div class="container">
-    <div class="row">
-        <div class="col s5">{{project.content}}</div>
-        <div class="col s2 right">{{project.dificulty}}</div>
-        <div class="col s2 right">{{project.currentPlayers}} / {{project.maxPlayers}} People</div>
-        <div class="col s2 right">{{project.gameName}}</div>
-    </div>
-    <div class="row contact-info">
-        <p class="times">Game time from {{project.timeFrom}} to {{project.timeTo}}</p>
-        <p>Available at: {{project.gamerTag}} or {{project.User.email}}</p>
-    </div>
-</div>
-
-<div class="row">
-  <div class="col m2">
-    <button class="btn btn-sm btn-danger" id="edit-btn" data-id="{{post.id}}">EDIT</button>
+  <div class="row">
+      <div class="col s5">{{project.content}}</div>
+      <div class="col s2 right">{{project.dificulty}}</div>
+      <div class="col s2 right">{{project.currentPlayers}} / {{project.maxPlayers}} People</div>
+      <div class="col s2 right">{{project.gameName}}</div>
   </div>
-  <div class="col m2">
-    <button class="btn btn-sm btn-danger" id="delete-btn" data-id="{{post.id}}">DELETE</button>
+  <div class="row contact-info">
+      <p class="times">Game time from {{project.timeFrom}} to {{project.timeTo}}</p>
+      <p>Available at: {{project.gamerTag}} or {{project.User.email}}</p>
+  </div>
+
+  <div class="row">
+    <div class="col m2">
+      <button class="btn btn-sm btn-danger" id="edit-btn" data-id="{{post.id}}">EDIT</button>
+    </div>
+    <div class="col m2">
+      <button class="btn btn-sm btn-danger" id="delete-btn" data-id="{{post.id}}">DELETE</button>
+    </div>
   </div>
 </div>
 
