@@ -132,7 +132,6 @@ router.get('/edit-group/:id', withAuth, async (req,res)=> {
                 }]
             }]
         });
-        console.log("req.session.id", req.session.id)
         const project = group.get({ plain: true });
         res.render('userGroup', {
             project,
@@ -143,5 +142,5 @@ router.get('/edit-group/:id', withAuth, async (req,res)=> {
         console.error(err)
         res.status(500).json(err)
     }
-})
+});
 module.exports = router;

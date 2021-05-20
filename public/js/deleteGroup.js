@@ -23,7 +23,7 @@ const deleteFormHandler = async (event) => {
   try {
     const response = await fetch(`/api/groups/${id}`, {
       method: 'DELETE',
-      body: JSON.stringify({ post_id: id }),
+      body: JSON.stringify({ group_id: id }),
       headers: {
         'Content-Type': 'application/json',
       },
