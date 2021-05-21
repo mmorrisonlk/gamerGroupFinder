@@ -50,7 +50,7 @@ Group.init(
             type:DataTypes.INTEGER,
             allowNull:true
         },
-        dificulty:{
+        difficulty:{
             type:DataTypes.STRING,
             allowNull:true
         }

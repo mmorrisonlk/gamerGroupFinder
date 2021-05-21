@@ -8,7 +8,7 @@ const newFormHandler = async (event) => {
 
     const title = document.querySelector('#title').value.trim();
     const content = document.querySelector('#content').value.trim();
-    const dificulty = document.querySelector('#difficulty').value.trim();
+    const difficulty = document.querySelector('#difficulty').value.trim();
     const gamerTag = document.querySelector('#gamer_tag').value.trim();
     const gameName = document.querySelector('#game_name').value.trim();
     const timeFrom = document.querySelector('#time_from').value.trim();
@@ -19,7 +19,7 @@ const newFormHandler = async (event) => {
     if (title && content) {
         const response = await fetch(`/api/groups`, {
         method: 'POST',
-        body: JSON.stringify({ title, content, dificulty, gamerTag, gameName, timeFrom, timeTo, currentPlayers, maxPlayers }),
+        body: JSON.stringify({ title, content, difficulty, gamerTag, gameName, timeFrom, timeTo, currentPlayers, maxPlayers }),
         headers: {
             'Content-Type': 'application/json',
         },
