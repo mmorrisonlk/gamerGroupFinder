@@ -81,7 +81,7 @@ router.get('/group/:id', withAuth, async (req, res) => {
   router.get("/user-group", async (req,res) => {
     try{
      const groups = await Group.findAll({
-        includes: [{ model: User }],
+        include: [{ model: User }],
         where: {
             user_id: req.session.user_id
         }
