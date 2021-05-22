@@ -1,5 +1,22 @@
 # project2
 
+[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)
+
+## Table of Contents
+
+1. [Description](#Description)
+2. [User Story](#UserStory)
+3. [Elevator Pitch](#ElevatorPitch)
+4. [Criteria](#Criteria)
+5. [Wireframe](#Wireframe)
+6. [User Flow](#UserFlowDiagram)
+3. [Installation](#Installation)
+4. [Usage](#Usage)
+6. [Issues](#Issues)
+7. [Credits](#Credits)
+8. [License](#License)
+9. [Questions](#Questions)
+
 ## Description
 
 Gamer 4 Gamer - MVP
@@ -23,22 +40,18 @@ Database needs - Available Groups
     - casual/competitive?
     - schedule
 
+### Screenshots
 
-<!-- * game arcade thing
-* farmer planner/app
-* game group finder
-* budget planner
-* greatbay part 2 -->
 
-## User Story
+## UserStory
 
     As a game player, I want a website that helps me find game groups to play with that will provide me what game they play, their schedule, their play style, and how to contact them.
 
-## Elevator Pitch
+## ElevatorPitch
 
     This website is made to provide an easier way for users to find or make groups for playing games together.
 
-## Requirements
+## Criteria
 
 * Use Node.js and Express.js to create a RESTful API.
 
@@ -82,12 +95,18 @@ Database needs - Available Groups
 ### Page - List of user's created groups
 ![Wireframe - User created groups](./public/images/wireframeUserGroups.png)
 
-## User Flow Diagram
+## UserFlowDiagram
 
 ![User flow diagram](./public/images/userFlow.png)
 
-## Screenshots
+## Installation
+
+## Usage
+
+## Issues
 
 ## Credits
 
 ## License
+
+## Questions
