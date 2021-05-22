@@ -1,18 +1,21 @@
 <div class="container indigo darken-3 white-text">
     <div class="row">
-        <div class="col s6">Content</div>
+        <div class="col s4">Title</div>
         <div class="col s2 right">Difficulty</div>
-        <div class="col s2 right">Current / Max Players</div>
+        <div class="col s3 right">Current / Max Players</div>
         <div class="col s2 right">Game Name</div>
     </div>
 </div>
 
 <div class="container">
     <div class="row">
-        <div class="col s5">{{project.content}}</div>
+        <div class="col s4">{{project.title}}</div>
         <div class="col s2 right">{{project.difficulty}}</div>
-        <div class="col s2 right">{{project.currentPlayers}} / {{project.maxPlayers}} People</div>
+        <div class="col s3 right">{{project.currentPlayers}} / {{project.maxPlayers}} People</div>
         <div class="col s2 right">{{project.gameName}}</div>
+    </div>
+    <div class="row group-content">
+        <p>{{project.content}}</p>
     </div>
     <div class="row contact-info">
         <p class="times">Game time from {{project.timeFrom}} to {{project.timeTo}}</p>
