@@ -10,38 +10,28 @@
 4. [Criteria](#Criteria)
 5. [Wireframe](#Wireframe)
 6. [User Flow](#UserFlowDiagram)
-3. [Installation](#Installation)
-4. [Usage](#Usage)
-6. [Issues](#Issues)
-7. [Credits](#Credits)
-8. [License](#License)
-9. [Questions](#Questions)
+7. [Installation](#Installation)
+8. [Usage](#Usage)
+9. [Contributions](#Contributing)
+10. [Issues](#Issues)
+11. [Credits](#Credits)
+12. [License](#License)
 
 ## Description
 
-Gamer 4 Gamer - MVP
-    - post a game group looking to find people to play with
-    - look at available game listenings 
-    - search for a game or genre that you are interested in
-    - login to make a game group and see the contact info
+This is an application created so that gamers can connect with other gamers in order to fill needed positions for a team. It is a full-stack web application designed and built on the MVC paradigm. It includes our own server-side API, user authentication, and connects to a database using MySQL.
 
-    -stretch
-        -comments on postings
-        -Waitlist?
+Our original goals were to be able to:
+* Post a game group looking to find people to play with
+* Look at available game listings
+* Login to make a game group and view the listings
+* Include contact information on the game group listing
+* Comment on posting to contact the creator and other players
 
-Database needs - Available Groups
-    - Auto Increment ID KEY
-    - Group Name
-    - user
-    - game name
-    - genre
-    - max group size (current size)
-    - contact info (email, discord, psn, gamertag)
-    - casual/competitive?
-    - schedule
-
-### Screenshots
-
+Our stretch goals were:
+* Include a waitlist
+* Mark filled groups as red
+* Edit and delete user comments
 
 ## UserStory
 
@@ -101,12 +91,28 @@ Database needs - Available Groups
 
 ## Installation
 
+Files must be downloaded from Github. Then, run npm install to get the necessary node modules. Edit or duplicate the .env.EXAMPLE file to be just a .env file and fill in your MySql username and password. Open the schema.sql in MySql and run the file. Back in the code application, run node seeds to fill information into the database. Last, run npm start.
+
+A ready version is also available at the [deployed website](https://gamer-groups.herokuapp.com/)
+
 ## Usage
+
+Users can create a post with a group and its information, including the user's contact info, and view other created groups. They can create comments on the posts. They can edit or delete their own posts.
+
+## Contributing
+
+For contributions, please create a fork to work on then, when done, create a Pull Request.
 
 ## Issues
 
+Submit an Issue through Github for any bugs or problems.
+
 ## Credits
+
+Assignment was developed as part of the SMU Coding Bootcamp.
 
 ## License
 
-## Questions
+Copyright Ashley Wright, Marquell Thompson, Mark Morrison 2021
+
+This is covered under the <a href='https://opensource.org/licenses/ISC'>ISC</a> license.
